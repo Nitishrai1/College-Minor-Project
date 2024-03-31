@@ -10,3 +10,12 @@ body{
   font-weight: 600;
   font-style: normal;
 }
+/* Styling the login button */
+/* form #Login{
+  border-radius: 10px;
+} */
+
+.btn-sm btn-outline-secondary{
+  margin-left: 10px;
+
+}
