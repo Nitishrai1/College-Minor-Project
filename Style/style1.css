@@ -23,9 +23,16 @@ body{
   width: 500px;
   height: 100vh;
   border: 2px solid black;
+  background-size: cover;
 
 }
-
+/* styling for image */
+.right-side img{
+  margin-top: 30px;
+  width: 500px;
+  height: 400px;
+  background-size: cover;
+}
 .form{
   width: 500px;
   height: 400px;
@@ -36,7 +43,18 @@ body{
 .container{
   display: flex;
   margin-top: 30px;
-  background-color: green;
+  background-color: white;
   justify-content: space-between;
+  flex-wrap: wrap;
 
 }
+
+.form .input-field{
+  width: 490px;
+  height: 50px;
+  border-radius: 10px;
+  margin: 8px 5px;
+ 
+   
+}
+
