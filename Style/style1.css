@@ -62,4 +62,49 @@ body{
  
    
 }
+/* .column-spacing{
+  margin: 0px 2px;
+} */
+
+
+/* /media query */
+/* Add this media query at the end of your CSS */
+@media only screen and (max-width: 992px) {
+  body {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+
+  .container-fluid {
+    padding: 0 15px; /* Add padding to container for smaller screens */
+  }
+
+  .left-side {
+    margin-left: 0; /* Remove left margin for smaller screens */
+    width: 100%; /* Full width for smaller screens */
+  }
+
+  .right-side {
+    margin-top: 30px;
+    width: 100%; /* Full width for smaller screens */
+  }
+
+  .right-side img {
+    width: 100%; /* Make image fill the container for smaller screens */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .form {
+    width: 100%; /* Full width for smaller screens */
+    height: auto; /* Auto height */
+  }
+
+  .form .input-field {
+    width: 100%; /* Full width for input fields */
+  }
+
+  .container {
+    padding: 0 15px; /* Add padding to container for smaller screens */
+  }
+}
+
 
