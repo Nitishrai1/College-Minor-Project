@@ -1,7 +1,9 @@
 
+
 .container {
     max-width: 900px;
 }
+
 
 
 /* *{
@@ -30,7 +32,6 @@
     font-weight: bold;
     margin-bottom: 1rem;
 }
-
 .text-sec h2 {
     font-size: 2rem;
     font-weight: bold;
@@ -45,20 +46,16 @@
     margin-bottom: 0.5rem;
 }
 
-
 .text-sec h3 {
     font-size: 1.5rem;
     font-weight: bold;
     margin-top: 1rem;
     margin-bottom: 0.5rem;
 }
-
-
 .text-center p {
     margin-top: 0.5rem;
     margin-bottom: 1rem;
 }
-
 
 .text-sec p {
     margin-top: 0.5rem;
@@ -75,7 +72,11 @@
         font-size: 2rem;
     }
 
+
 }
+
+
+
 
 
 #im2{

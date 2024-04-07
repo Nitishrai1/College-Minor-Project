@@ -108,3 +108,87 @@ body{
 }
 
 
+.grid-item {
+  border: 1px solid #fff7f0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  /* margin-bottom: 20px; */
+  /* margin-left:   10px; */
+  margin: 10px 10px;
+  
+}
+.property-section{
+  padding-top: 50px;
+  list-style: 1.5rem;
+}
+
+.property-section h1{
+  
+  display:inline-block;
+  justify-content: flex-start;
+  
+}
+
+#maticon{
+  background-color: #fffaf7;
+}
+
+.list-item{
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none; 
+  padding: 0;
+}
+.list-item li{
+  display: inline;
+  
+}
+.list-item li a{
+  text-decoration: none;
+  color: black;
+  opacity: 0.5;
+
+}
+
+
+/* /media query */
+/* Add this media query at the end of your CSS */
+@media only screen and (max-width: 992px) {
+  body {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+
+  .container-fluid {
+    padding: 0 15px; /* Add padding to container for smaller screens */
+  }
+
+  .left-side {
+    margin-left: 0; /* Remove left margin for smaller screens */
+    width: 100%; /* Full width for smaller screens */
+  }
+
+  .right-side {
+    margin-top: 30px;
+    width: 100%; /* Full width for smaller screens */
+  }
+
+  .right-side img {
+    width: 100%; /* Make image fill the container for smaller screens */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .form {
+    width: 100%; /* Full width for smaller screens */
+    height: auto; /* Auto height */
+  }
+
+  .form .input-field {
+    width: 100%; /* Full width for input fields */
+  }
+
+  .container {
+    padding: 0 15px; /* Add padding to container for smaller screens */
+  }
+}
+
+
