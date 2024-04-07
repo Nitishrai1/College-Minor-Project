@@ -79,9 +79,14 @@ body{
 
 .property-section h1{
   
-  display:inline-block;
-  justify-content: flex-start;
+  /* display:inline-block; */
+  display: flex;
+  justify-content: space-between;
   
+}
+
+.property-section .explore{
+  color: #fe8d4b;
 }
 
 #maticon{
@@ -104,6 +109,7 @@ body{
   opacity: 0.5;
 
 }
+
 
 
 /* /media query */
