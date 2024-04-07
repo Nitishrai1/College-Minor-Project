@@ -1,9 +1,9 @@
-<<<<<<< HEAD
+
 .container {
     max-width: 900px;
 }
 
-=======
+
 /* *{
     margin: 0;
   padding: 0;
@@ -24,20 +24,19 @@
 }
 
 
->>>>>>> 96d383c8634388abab211075e32fe27885b18062
+
 .text-center h2 {
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 1rem;
 }
-<<<<<<< HEAD
-=======
+
 .text-sec h2 {
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 1rem;
 }
->>>>>>> 96d383c8634388abab211075e32fe27885b18062
+
 
 .text-center h3 {
     font-size: 1.5rem;
@@ -45,27 +44,27 @@
     margin-top: 1rem;
     margin-bottom: 0.5rem;
 }
-<<<<<<< HEAD
-=======
+
+
 .text-sec h3 {
     font-size: 1.5rem;
     font-weight: bold;
     margin-top: 1rem;
     margin-bottom: 0.5rem;
 }
->>>>>>> 96d383c8634388abab211075e32fe27885b18062
+
 
 .text-center p {
     margin-top: 0.5rem;
     margin-bottom: 1rem;
 }
-<<<<<<< HEAD
-=======
+
+
 .text-sec p {
     margin-top: 0.5rem;
     margin-bottom: 1rem;
 }
->>>>>>> 96d383c8634388abab211075e32fe27885b18062
+
 
 @media (min-width: 768px) {
     .text-center h2 {
@@ -75,10 +74,10 @@
     .text-center h3 {
         font-size: 2rem;
     }
-<<<<<<< HEAD
+
 }
-=======
-}
+
+
 #im2{
     width: 1000px;
 }
@@ -110,4 +109,4 @@
     box-shadow: 4px 7px 7px 0px #00000042;
 
 }
->>>>>>> 96d383c8634388abab211075e32fe27885b18062
+
