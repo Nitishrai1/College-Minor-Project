@@ -19,28 +19,33 @@
   
 </head>
 <body>
+  <div id="header">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-            <i class="fa-solid fa-house fa-2x nav-item mx-3"><span class="nav-item mx-2">Relasto</span></i>
-          </a>
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <i class="fa-solid fa-house fa-2x nav-item mx-3"><span  style="color: #fe8d4b; font-size: 30px;" class="nav-item mx-2"><sup>Relasto</sup></span></i>
+        </a>
             
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
               <li class="nav-item">
+<!-- <<<<<<< Mihir-Work -->
+                <!-- <a class="nav-link  mx-3" href="index.html">Home</a> -->
+<!-- ======= -->
                 <a class="nav-link active mx-3" aria-current="page" href="index.html">Home</a>
+<!-- >>>>>>> main -->
               </li>
               <li class="nav-item">
                 <a class="nav-link mx-3" href="#">Listing</a>
               </li>
-              <li class="nav-item mx-3">
+              <li class="nav-item">
                 <a class="nav-link mx-3" href="#property" >Property</a>
               </li>
-              <li class="nav-item mx-3">
+              <li class="nav-item">
                 <a class="nav-link mx-3" href="#blog" >Blog</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link mx-3" href="contact1.html">Contact Us</a>
+                <a class="nav-link active mx-3" aria-current="page"  href="contact1.html">Contact Us</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link mx-3" href="trial.html">About us</a>
@@ -57,12 +62,13 @@
           </div>
         </div>
       </nav>
-      <br>
-      <div class="text-center">
+    </div>
+      <br><br>
+      <div class="text-center" id="content">
         <h1>Get in Touch</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, impedit Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore atque cum </p>
       </div>
-      <br>
+      <br><br>
       <div class=" row justify-content-center">
       <table class="table table-responsive">
         <tr>
@@ -70,32 +76,42 @@
           <tr>
             
               <td>
+                <div class="borders">
                   <div class="container">
                    
-                      <form action="">
+                      <form action="
+
+                      https://sheetdb.io/api/v1/h1ol5urlf2q28" method="post" id="sheetdb-form">
                           <div class="mb-3">
                             
                               <h3>Send a Message</h3>
-                              <input type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Name">
+                              <input type="text" class="form-control" id="name" aria-describedby="emailHelp" name="data[Name]" placeholder="Name">
                           </div>
                           <div class="mb-3">
                               
-                              <input type="email" class="form-control" id="email" placeholder="Email">
+                              <input type="email" class="form-control" id="email" name="data[Email]" placeholder="Email">
+                          </div>
+                          <div class="mb-3">
+                            <input type="number" class="form-control" id="number" name="data[Number]" placeholder="Number">
                           </div>
                           <div class="mb-3">
                               
-                              <textarea class="form-control" id="message" rows="3" placeholder="Message"></textarea>
+                              <textarea class="form-control" id="message" rows="3" name="data[Message]" placeholder="Message"></textarea>
                           </div>
-                          <button type="submit" class="btn btn-primary">Send Message</button>
+                          <!-- <button type="submit" class="btn btn-primary">Send Message</button> -->
+                          <div class="d-grid gap-2">
+                            <button class="btn btn-primary" type="submit">Send Message</button>
+                          </div>
                       </form>
                   </div>
+                </div>
               </td>
               <td>
                   <div class="container">
                       
                       <p><h4>Office Address</h4></p>
                       <p>144411, Law gate,</p>
-                      <p>Punjab(India)</p>
+                      <p>Punjab (India)</p>
                       
                       <div class="contain"><span class="material-symbols-outlined">
                         call 
@@ -108,58 +124,121 @@
                         </span>
                         <span> &nbsp; info@email.com</span>
                       </div>
-                      <br>
+                     
+                      </div>
+              </td>
+          </tr>
+        </tr>
       </table>
     </div>
-    <div class="container my-5">
-      <footer class="bg-dark text-center text-white" id ="foot">
-       <!-- Grid container -->
-      <div class="container p-4 pb-0">
-         <!-- Section: Social media -->
-         <section class="mb-4">
-          <!-- Facebook -->
-          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-           ><i class="fab fa-facebook-f"></i
-          ></a>
-   
-          <!-- Twitter -->
-          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-           ><i class="fab fa-twitter"></i
-          ></a>
-   
-          <!-- Google -->
-          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-           ><i class="fab fa-google"></i
-          ></a>
-   
-          <!-- Instagram -->
-          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-           ><i class="fab fa-instagram"></i
-          ></a>
-   
-          <!-- Linkedin -->
-          <a class="btn btn-outline-light btn-floating m-1" href="www.linkedin.com/in/16-aniruddha " role="button"
-           ><i class="fab fa-linkedin-in"></i
-          ></a>
-   
-          <!-- Github -->
-          <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/Aniruddhap20" role="button"
-           ><i class="fab fa-github"></i
-          ></a>
-         </section>
-         <!-- Section: Social media -->
-     </div>
-     <!-- Grid container -->
-   
-     <!-- Copyright -->
-     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-       © 2024 Copyright:
-       <a class="text-white" href="#!">Relasto.com</a>
-     </div>
-     <!-- Copyright -->
-     </footer>
+    <br><br>
+    <div id="footer">
+      <footer class="row row-cols-5 py-5 my-5  bg-dark text-center text-white">
+        <!-- <div class="col"> -->
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              <i class="fa-solid fa-house fa-2x nav-item mx-3"><span  style="color: #fe8d4b; font-size: 30px;" class="nav-item mx-2"><sup>Relasto</sup></span></i>
+            </a>
+            <br><br>
+            <p><span>144411, Law gate,</span>
+
+              <span>Punjab (India)</span></p>
+          <p class="text-muted"><h4>© 2024</h4></p>
+        </div>
+    
+        <div class="col hovers">
+          <span ><h5>Social</h5></span>
+          <section class="mb-4">
+            <!-- Facebook -->
+            <a class="btn btn-outline-light btn-floating m-1" href="www.facebook.com" role="button"
+             ><i class="fab fa-facebook-f"></i
+            ></a>
      
-         </div>
+            <!-- Twitter -->
+            <a class="btn btn-outline-light btn-floating m-1" href="www.twitter.com" role="button"
+             ><i class="fab fa-twitter"></i
+            ></a>
+     
+            
+     
+            <!-- Instagram -->
+            <a class="btn btn-outline-light btn-floating m-1" href="www.instagram.com" role="button"
+             ><i class="fab fa-instagram"></i
+            ></a>
+     
+            <!-- Linkedin -->
+            <a class="btn btn-outline-light btn-floating m-1" href="www.linkedin.com " role="button"
+             ><i class="fab fa-linkedin-in"></i
+            ></a>
+     
+            
+           </section>
+    
+        </div>
+    
+        <div class="col hovers">
+          <h5>Section</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2 "><a href="#" class="nav-link p-0 hovering">Home</a></li>
+            <li class="nav-item mb-2 "><a href="#" class="nav-link p-0 hovering">Features</a></li>
+            <li class="nav-item mb-2 "><a href="#" class="nav-link p-0 hovering">Pricing</a></li>
+            <li class="nav-item mb-2 "><a href="#" class="nav-link p-0 hovering">FAQs</a></li>
+            <li class="nav-item mb-2 "><a href="#" class="nav-link p-0 hovering">About</a></li>
+          </ul>
+        </div>
+    
+        <div class="col hovers">
+          <h5>Section</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2 "><a href="#" class="nav-link p-0 hovering">Home</a></li>
+            <li class="nav-item mb-2 "><a href="#" class="nav-link p-0 hovering">Features</a></li>
+            <li class="nav-item mb-2 "><a href="#" class="nav-link p-0 hovering">Pricing</a></li>
+            <li class="nav-item mb-2 "><a href="#" class="nav-link p-0 hovering">FAQs</a></li>
+            <li class="nav-item mb-2 "><a href="#" class="nav-link p-0 hovering">About</a></li>
+          </ul>
+        </div>
+    
+        <div class="col hovers">
+          <h5>Section</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2 "><a href="#" class="nav-link p-0 hovering">Home</a></li>
+            <li class="nav-item mb-2 "><a href="#" class="nav-link p-0 hovering">Features</a></li>
+            <li class="nav-item mb-2 "><a href="#" class="nav-link p-0 hovering">Pricing</a></li>
+            <li class="nav-item mb-2 "><a href="#" class="nav-link p-0 hovering">FAQs</a></li>
+            <li class="nav-item mb-2 "><a href="#" class="nav-link p-0 hovering">About</a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+    <!-- <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbxGpV6zXaYiDTvdIAfDdYS-SMkrvF8mXLHDdGjhMz_EArJs-ewsXDviI7-CMccKdUpP/exec'
+
+const form = document.forms['Contact-Form']
+
+form.addEventListener('submit', e => {
+  e.preventDefault()
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+  .then(response => alert("Thank you! your form is submitted successfully." ))
+  .then(() => { window.location.reload(); })
+  .catch(error => console.error('Error!', error.message))
+})
+    </script> -->
+    <script>
+      var form = document.getElementById('sheetdb-form');
+  form.addEventListener("submit", e => {
+    e.preventDefault();
+    fetch(form.action, {
+        method : "POST",
+        body: new FormData(document.getElementById("sheetdb-form")),
+    }).then(
+        response => response.json()
+    ).then((html) => {
+      // you can put any JS code here
+      window.alert("Thank you! your form is submitted successfully.");
+
+    });
+  });
+  </script>
     
 </body>
 </html>

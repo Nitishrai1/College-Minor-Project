@@ -21,6 +21,9 @@ body{
   margin-top: 30px;
 
 }
+/* .first-form{
+  border: none;
+} */
 
 .right-side{
   margin-top: 30px;
@@ -41,7 +44,8 @@ body{
   width: 500px;
   height: 400px;
   border-radius: 8px;
-  border: 1px solid black;
+  border: none;
+
   margin-top: 25px;
   background-color: white;
 }
@@ -62,6 +66,51 @@ body{
  
    
 }
+/* .column-spacing{
+  margin: 0px 2px;
+} */
+
+
+/* /media query */
+/* Add this media query at the end of your CSS */
+@media only screen and (max-width: 992px) {
+  body {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+
+  .container-fluid {
+    padding: 0 15px; /* Add padding to container for smaller screens */
+  }
+
+  .left-side {
+    margin-left: 0; /* Remove left margin for smaller screens */
+    width: 100%; /* Full width for smaller screens */
+  }
+
+  .right-side {
+    margin-top: 30px;
+    width: 100%; /* Full width for smaller screens */
+  }
+
+  .right-side img {
+    width: 100%; /* Make image fill the container for smaller screens */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .form {
+    width: 100%; /* Full width for smaller screens */
+    height: auto; /* Auto height */
+  }
+
+  .form .input-field {
+    width: 100%; /* Full width for input fields */
+  }
+
+  .container {
+    padding: 0 15px; /* Add padding to container for smaller screens */
+  }
+}
+
 
 .grid-item {
   border: 1px solid #fff7f0;
@@ -109,6 +158,72 @@ body{
   opacity: 0.5;
 
 }
+#maticon i{
+  /* height: 30px;
+  width: 30px; */
+  font-size: 20px;
+  margin-top: 25px;
+
+}
+.card{
+  height: 400px;
+}
+.card-img-top img{
+  height: 50%;
+  object-fit: cover;
+  
+}
+
+.card-2{
+  height: 200px;
+}
+.card-2 img{
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* css for the hover effects */
+
+
+/* .property-section .explore :hover{
+  font-weight: 600;
+} */
+.list-item :hover{
+  opacity: 1;
+  /* color: black; */
+  cursor: pointer;
+}
+
+
+.image-best{
+  
+  height: 400px;
+  width: 50%;
+  margin-top: 50px;
+
+}
+.image-best img{
+  margin-left: 80px;
+  height: 100%;
+  object-fit: cover;
+}
+.image-best img{
+  border-radius: 8px;
+  box-shadow:-20px 20px 0px rgb(252 101 10);
+  
+}
+.image-best ul{
+  padding-left: 0px;
+}
+.image-best ul li i{
+  margin-right: 20px;
+}
+.image-best ul li{
+  list-style-type: none;
+  
+}
+
 
 
 
