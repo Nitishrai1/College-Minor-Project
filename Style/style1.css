@@ -282,7 +282,9 @@ body{
 /* CSS style for image slider */
 /* @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap"); */
 
-
+/* image-slider{
+  margin: auto;
+} */
 .swiper-container h1 {
   margin: 0;
   font-weight: bold;
@@ -342,6 +344,10 @@ body{
   height: 100%;
   max-height: 420px;
   border-radius: 10px;
+  /* margin: auto; */
+  /* margin-right: 60px; */
+  margin-left: 70px;
+  
 }
 
 .slider-image-wrapper {
@@ -422,7 +428,7 @@ body{
   position: absolute;
   display: flex;
   top: 100%;
-  justify-content: flex-end;
+  justify-content: space-between;
   width: 100%;
   padding-top: 8px;
 }
@@ -436,7 +442,8 @@ body{
   outline: none;
   color: #1c1b1b;
   position: relative;
-  margin-left: 4px;
+  margin-left: 2px;
+
 }
 .swiper-button-next:before,
 .swiper-button-prev:before {
