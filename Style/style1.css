@@ -481,6 +481,14 @@ body{
   }
 }
 
+/* Footer-section */
+#footer {
+  height: 20px;
+  background: #222;
+  color: white;
+
+}
+
 /* /media query */
 /* Add this media query at the end of your CSS */
 @media only screen and (max-width: 992px) {
