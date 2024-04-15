@@ -97,7 +97,7 @@ body{
     box-shadow: 4px 7px 7px 0px #00000042;
 
 }
-<<<<<<< HEAD
+
 .accordion-item {
     margin-bottom: 20px;
     border: 1px solid #ddd;
@@ -115,7 +115,7 @@ body{
     text-align: left;
   }
   .accordion-button:focus {
-    outline: none;
+     outline: none;
   }
   .accordion-body {
     padding: 15px;
@@ -126,4 +126,3 @@ body{
 /* .flexes{
     display: inline-flex;
 } */
->>>>>>> f8b2f8b6ef6fb1e3860f26cfd56e7b2edb049f09
