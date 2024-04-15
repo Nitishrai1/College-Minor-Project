@@ -97,7 +97,9 @@ body{
     box-shadow: 4px 7px 7px 0px #00000042;
 
 }
+
 /* <<<<<<< mypro */
+
 .accordion-item {
     margin-bottom: 20px;
     border: 1px solid #ddd;
@@ -115,7 +117,7 @@ body{
     text-align: left;
   }
   .accordion-button:focus {
-    outline: none;
+     outline: none;
   }
   .accordion-body {
     padding: 15px;
@@ -123,6 +125,7 @@ body{
     border-top: 1px solid #ddd;
   }
 
+/* <<<<<<< Mihir-Work */
   #footer {
     width: 100%;
     height: 20%;
@@ -131,3 +134,10 @@ body{
     position:absolute;
     
   }
+/* ======= */
+
+/* .flexes{
+    display: inline-flex;
+} */
+
+/* >>>>>>> main */
