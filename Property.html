@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="./Style/Property.css">
+</head>
+<body>
+    <div id="header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <i class="fa-solid fa-house fa-2x nav-item mx-3"><span style="color: #fe8d4b; font-size: 30px;" class="nav-item mx-2"><sup>Relasto</sup></span></i>
+                </a>
+    
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link mx-3"  href="index.html">Home</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link mx-3" href="#">Listing</a>
+                        </li> -->
+                        <li class="nav-item">
+                            <a class="nav-link active mx-3" aria-current="page" href="Property.html">Property</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link mx-3" href="#blog">Blog</a>
+                        </li> -->
+                        <li class="nav-item">
+                            <a class="nav-link mx-3"  href="contact1.html">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-3" href="trial.html">About us</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                        <button class="btn btn-sm btn-outline-secondary bg-dark mx-2" type="button">Login</button>
+                    </form>
+    
+                </div>
+            </div>
+        </nav>
+    </div>
+    
+    <br><br>
+    <!-- property section -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7 rounded-images">
+                <img src="images/property1.jpg" class="img-fluid" alt="Main Image">
+            </div>
+            <div class="col-md-4 rounded-images">
+                <img src="images/interiour-card.jpg" class="img-fluid" alt="Inset Image">
+                <img src="images/property3.jpg" class="img-fluid" alt="Inset Image">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="container-second">
+                    <h2 class="fw-bold">Trovilla Plan in Sereno Canyon - Estate Collection by Toll Brothers</h2>
+                    <h3>2861 62nd Ave, Oakland, CA 94605</h3>
+                    <div class="container-third">
+                        <div class="box-1">
+                            <h4>$649,900</h4>
+                            <h6>Online Cash/Payment</h6>
+                        </div>
+                        <div class="box-1">
+                            <h4>$850/Month</h4>
+                            <h6>0% EMI for 6 months</h6>
+                        </div>
+                    </div>
+                    <br>
+                    <h3 class="fw-bold">Well-constructed 1562 Sq Ft Home Is Now Offering To You In Uttara For Sale</h3>
+                    <p>
+                        A slider is a great way to display a slideshow featuring images or videos, usually on your homepage. Adding sliders to your site is no longer difficult. You don't have to know coding anymore. Just use a slider widget, and it will automatically insert the slider on your web page. So the Elementor slider would be a great tool to work with when building a WordPress site.
+                    </p>
+                    <h2 class="fw-bold">Local Information</h2>
+                    <p class="fw-bold">Note-: Click on each to get the location through maps.</p>
+                    <div class="d-flex justify-content-between flex-wrap">
+                        <button onclick="showMap()" class="btn btn-dark btn-lg mt-3">SCHOOL</button>
+                        <button onclick="showMap1()" class="btn btn-dark btn-lg mt-3">Hospital</button>
+                        <button onclick="showMap2()" class="btn btn-dark btn-lg mt-3">Crime</button>
+                        <button onclick="showMap3()" class="btn btn-dark btn-lg mt-3">Malls</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="container-fourth mt-3">
+                    <div id="mapContainer" style="display: none">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d109157.61121873214!2d75.67031876717142!3d31.24356877315501!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391af506c8dd606d%3A0x594a663bde8f609!2sSt.%20Joseph&#39;s%20Convent%20School!5e0!3m2!1sen!2sin!4v1712610432482!5m2!1sen!2sin" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div id="mapContainer1" style="display: none">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27295.88460957615!2d75.71999561083986!3d31.221129!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391af59def846977%3A0x8db6233491639d87!2sJakhu%20Hospital%20-%20Best%20Heart%20Care%20Consultant%20%26%20Physician!5e0!3m2!1sen!2sin!4v1712610956937!5m2!1sen!2sin" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div id="mapContainer2" style="display: none">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d109183.57067268934!2d75.6581930689458!3d31.22110109240882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391af51e105cf787%3A0xa5550e7d31a350ff!2sPolice%20Station%20Satnampura!5e0!3m2!1sen!2sin!4v1712611377005!5m2!1sen!2sin" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div id="mapContainer3" style="display: none">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d109094.81661676947!2d75.43682454335939!3d31.29785700000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a5b9929a641fb%3A0xc045addc15256f60!2sPPR%20Mall!5e0!3m2!1sen!2sin!4v1712611590662!5m2!1sen!2sin" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <div class="form-first mt-3 box-2">
+                    <h3 class="fw-bold">Request for Visit</h3>
+                    <form>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><img src="images/personlogo.png" alt="Person Logo" width="15" height="20"></span>
+                            <input type="text" class="form-control" placeholder="Enter your Full Name" required>
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><img src="images/email-logo.png" alt="Email Logo" width="15" height="20"></span>
+                            <input type="email" class="form-control" placeholder="Enter your Email" required>
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><img src="images/phone-call.png" alt="Phone Logo" width="15" height="20"></span>
+                            <input type="tel" class="form-control" placeholder="Enter your Phone number" required>
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><img src="images/date.png" alt="Date Logo" width="15" height="20"></span>
+                            <input type="date" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="5" placeholder="Enter your Message here" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-dark btn-lg d-block mx-auto">Send Request</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container border border-1  bg-white box">
+        <div class="row">
+            <div class="col">
+                <h1>Home highlights</h1>
+                <div class="row">
+                    <div class="col">
+                        <ul>
+                            <li>Parking</li>
+                            <li>Outdoor</li>
+                            <li>A/C</li>
+                            <li>YearBuilt</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <ul class="list-unstyled">
+                        <li>No info</li>
+                        <li>No info</li>
+                        <li>No info</li>
+                        <li>2021</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <ul>
+                            <li>HOA</li>
+                            <li>Price/Sqft</li>
+                            <li>Listed</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <ul class="list-unstyled">
+                            <li>None</li>
+                            <li>$650</li>
+                            <li>No Info</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <footer class="row row-cols-5 py-5 my-5  bg-dark text-center text-white">
+          <!-- <div class="col"> -->
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">
+                <i class="fa-solid fa-house fa-2x nav-item mx-3"><span  style="color: #fe8d4b; font-size: 30px;" class="nav-item mx-2"><sup>Relasto</sup></span></i>
+              </a>
+              <br><br>
+              <p><span>144411, Law gate,</span>
+  
+                <span>Punjab (India)</span></p>
+            <p class="text-muted"><h4>© 2024</h4></p>
+          </div>
+      
+          <div class="col hovers">
+            <span ><h5>Social</h5></span>
+            <section class="mb-4">
+              <!-- Facebook -->
+              <a class="btn btn-outline-light btn-floating m-1" href="www.facebook.com" role="button"
+               ><i class="fab fa-facebook-f"></i
+              ></a>
+       
+              <!-- Twitter -->
+              <a class="btn btn-outline-light btn-floating m-1" href="www.twitter.com" role="button"
+               ><i class="fab fa-twitter"></i
+              ></a>
+       
+              
+       
+              <!-- Instagram -->
+              <a class="btn btn-outline-light btn-floating m-1" href="www.instagram.com" role="button"
+               ><i class="fab fa-instagram"></i
+              ></a>
+       
+              <!-- Linkedin -->
+              <a class="btn btn-outline-light btn-floating m-1" href="www.linkedin.com " role="button"
+               ><i class="fab fa-linkedin-in"></i
+              ></a>
+       
+              
+             </section>
+      
+          </div>
+      
+          <div class="col hovers">
+            <h5>Section</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2 "><a href="#" class="nav-link p-0 hovering">Home</a></li>
+              <li class="nav-item mb-2 "><a href="#" class="nav-link p-0 hovering">Features</a></li>
+              <li class="nav-item mb-2 "><a href="#" class="nav-link p-0 hovering">Pricing</a></li>
+              <li class="nav-item mb-2 "><a href="#" class="nav-link p-0 hovering">FAQs</a></li>
+              <li class="nav-item mb-2 "><a href="#" class="nav-link p-0 hovering">About</a></li>
+            </ul>
+          </div>
+      
+          <div class="col hovers">
+            <h5>Section</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2 "><a href="#" class="nav-link p-0 hovering">Home</a></li>
+              <li class="nav-item mb-2 "><a href="#" class="nav-link p-0 hovering">Features</a></li>
+              <li class="nav-item mb-2 "><a href="#" class="nav-link p-0 hovering">Pricing</a></li>
+              <li class="nav-item mb-2 "><a href="#" class="nav-link p-0 hovering">FAQs</a></li>
+              <li class="nav-item mb-2 "><a href="#" class="nav-link p-0 hovering">About</a></li>
+            </ul>
+          </div>
+      
+          <div class="col hovers">
+            <h5>Section</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2 "><a href="#" class="nav-link p-0 hovering">Home</a></li>
+              <li class="nav-item mb-2 "><a href="#" class="nav-link p-0 hovering">Features</a></li>
+              <li class="nav-item mb-2 "><a href="#" class="nav-link p-0 hovering">Pricing</a></li>
+              <li class="nav-item mb-2 "><a href="#" class="nav-link p-0 hovering">FAQs</a></li>
+              <li class="nav-item mb-2 "><a href="#" class="nav-link p-0 hovering">About</a></li>
+            </ul>
+          </div>
+        </footer>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="./javascript/app.js"></script>
+</body>
+</html>

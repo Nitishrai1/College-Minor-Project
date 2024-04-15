@@ -176,15 +176,26 @@ body{
 
 .card-2{
   height: 200px;
+  perspective: 1000px;
+  position: relative;
 }
 .card-2 img{
   height: 100%;
   object-fit: cover;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
 }
 
+.card-2 img:hover{
+  transform: rotateY(10deg) rotateX(10deg) scale(1.1);
+}
 
 /* css for the hover effects */
 
+.hover-effect :hover{
+  transform: translateY(-3px);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}
 
 /* .property-section .explore :hover{
   font-weight: 600;
@@ -223,9 +234,260 @@ body{
   list-style-type: none;
   
 }
+/* css for image slider */
+.carousel-inner {
+  padding: 1em;
+}
+.card {
+  margin: 0 0.5em;
+  box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+  border: none;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: #e1e1e1;
+  width: 6vh;
+  height: 6vh;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@media (min-width: 768px) {
+  .carousel-item {
+    margin-right: 0;
+    flex: 0 0 33.333333%;
+    display: block;
+  }
+  .carousel-inner {
+    display: flex;
+  }
+}
+.card .img-wrapper {
+    max-width: 100%;
+    height: 13em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card img {
+    max-height: 100%;
+}
+@media (max-width: 767px) {
+  .card .img-wrapper {
+    height: 17em;
+  }
+}
 
 
+/* CSS style for image slider */
+/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap"); */
 
+/* image-slider{
+  margin: auto;
+} */
+.swiper-container h1 {
+  margin: 0;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
+  color: #26384E;
+  transform: translateY(20px);
+  transition: all 0.4s ease;
+  transition-delay: 0.2s;
+  overflow: hidden;
+  max-width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+@media screen and (max-width: 520px) {
+  h1 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.swiper-container p {
+  font-size: 16px;
+  line-height: 24px;
+  color: #889DB8;
+  transform: translateY(20px);
+  transition: all 0.4s ease;
+  transition-delay: 0.3s;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media screen and (max-width: 520px) {
+ .swiper-container p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+.swiper-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+  position: relative;
+}
+
+.swiper-container {
+  background: linear-gradient(270deg, #f7f9ff 0%, #f2f6ff 100%);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  width: 100%;
+  position: relative;
+  max-width: 420px;
+  height: 100%;
+  max-height: 420px;
+  border-radius: 10px;
+  /* margin: auto; */
+  /* margin-right: 60px; */
+  margin-left: 70px;
+  
+}
+
+.slider-image-wrapper {
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider-item {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  opacity: 0;
+  background: linear-gradient(270deg, #f7f9ff 0%, #f2f6ff 100%);
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+.slider-item-content {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: 0.4s;
+}
+.slider-item-content > * {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.swiper-slide-active .slider-item-content > * {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.slider-image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: 0.2s;
+}
+
+.swiper-pagination {
+  position: absolute;
+  left: 50%;
+  bottom: 8px;
+  transform: translatex(-50%);
+  z-index: 1;
+  width: auto !important;
+}
+
+.swiper-pagination-bullet {
+  border-radius: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  line-height: 30px;
+  font-size: 12px;
+  opacity: 1;
+  background: rgba(255, 185, 0, 0.3);
+  display: inline-block;
+  margin-right: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.swiper-pagination-bullet-active {
+  background: #FFB200;
+  width: 20px;
+  border-radius: 10px;
+}
+
+.slider-buttons {
+  position: absolute;
+  display: flex;
+  top: 100%;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 8px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  background-color: #FFB200;
+  border: 2px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  color: #1c1b1b;
+  position: relative;
+  margin-left: 2px;
+
+}
+.swiper-button-next:before,
+.swiper-button-prev:before {
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  height: 1px;
+  width: 0;
+  left: 0;
+  bottom: -1px;
+  transition: 0.2s;
+}
+.swiper-button-next:hover:before,
+.swiper-button-prev:hover:before {
+  width: 100%;
+}
+
+.socials {
+  position: fixed;
+  top: 12px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+}
+.socials .social-link {
+  display: inline-block;
+  margin-left: 8px;
+  color: #fff;
+}
+
+@media screen and (max-width: 520px) {
+  .swiper-button-next:hover:before,
+.swiper-button-prev:hover:before {
+    display: none;
+  }
+}
+
+/* Footer-section */
+#footer {
+  height: 20px;
+  background: #222;
+  color: white;
+
+}
 
 /* /media query */
 /* Add this media query at the end of your CSS */
