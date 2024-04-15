@@ -97,7 +97,9 @@ body{
     box-shadow: 4px 7px 7px 0px #00000042;
 
 }
+
 /* <<<<<<< mypro */
+
 .accordion-item {
     margin-bottom: 20px;
     border: 1px solid #ddd;
@@ -115,11 +117,16 @@ body{
     text-align: left;
   }
   .accordion-button:focus {
-    outline: none;
+     outline: none;
   }
   .accordion-body {
     padding: 15px;
     background-color: #fff;
     border-top: 1px solid #ddd;
   }
+
+
+/* .flexes{
+    display: inline-flex;
+} */
 
