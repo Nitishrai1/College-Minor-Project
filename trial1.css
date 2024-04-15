@@ -125,8 +125,19 @@ body{
     border-top: 1px solid #ddd;
   }
 
+/* <<<<<<< Mihir-Work */
+  #footer {
+    width: 100%;
+    height: 20%;
+    background: #222;
+    color: white;
+    position:absolute;
+    
+  }
+/* ======= */
 
 /* .flexes{
     display: inline-flex;
 } */
 
+/* >>>>>>> main */
