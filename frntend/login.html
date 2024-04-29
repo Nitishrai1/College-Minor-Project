@@ -1,4 +1,13 @@
-* {
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login-Form</title>
+    
+<style>
+    * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -12,7 +21,8 @@
   }
   
   body {
-    background-image: url("./images/house-card.jpg");
+    /* background-image: url("/house-card.jpg"); */
+    background-image: url("https://i.ibb.co/Kqfxvm1/house-card.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -180,3 +190,51 @@
       padding: 7.5em 1.5em 4em 1.5em;
     }
   }
+</style>
+</head>
+<body >
+    <div class="wrapper">
+  <div class="login_box">
+    <div class="login-header">
+      <span>Login</span>
+    </div>
+<form action="/login" method="post">
+    <div class="input_box">
+      <input type="text" id="user" class="input-field" name="name" placeholder="" required>
+      <label for="user" class="label">Username</label>
+      <i class="bx bx-user icon"></i>
+    </div>
+
+    <div class="input_box">
+      <input type="password" id="pass" class="input-field" name="password" placeholder="" required>
+      <label for="pass" class="label">Password</label>
+      <i class="bx bx-lock-alt icon"></i>
+    </div>
+
+    <div class="remember-forgot">
+      <div class="remember-me">
+        <input type="checkbox" id="remember">
+        <label for="remember">Remember me</label>
+      </div>
+
+      <div class="forgot">
+        <a href="#">Forgot password?</a>
+      </div>
+    </div>
+
+    <div class="input_box">
+      <input type="submit" class="input-submit" value="Login">
+    </div>
+    </form>
+
+    <div class="register">
+      <span>Don't have an account? <a href="signup">Signup</a></span>
+    </div>
+  </div>
+</div>
+<script>
+  
+</script>
+    
+</body>
+</html>

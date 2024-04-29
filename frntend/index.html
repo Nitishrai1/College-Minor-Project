@@ -1,0 +1,1396 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous"
+        >
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        >
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+        <link rel="icon" href="./images/logo.jpg">
+        <!-- <link rel="stylesheet" href="./Style/style1.css">  -->
+        <title>Relasto</title>
+        <style>
+          *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            
+            :root{
+                --primary-color:#fff7f0;
+                --secondary-color:#212121;
+                
+            }
+            .dark-theme{
+                --primary-color:#000106;
+                --secondary-color:#fff;
+
+            }
+            .nav-bar{
+                background-color: var(--primary-color);
+                border-bottom: 1px solid var(--secondary-color);
+            }
+            .nav-bar a{
+                text-decoration: none;
+                color: var(--secondary-color);
+                /* opacity: 0.5; */
+            }
+
+            .nav-bar a:hover{
+                color: rgb(27, 93, 27);
+
+            }
+            #moon{
+                width: 30px;
+                cursor: pointer;
+            }
+
+          body{
+              font-family: "Roboto Slab", serif;
+            font-optical-sizing: auto;
+            font-weight: 600;
+            font-style: normal;
+            color:var(--secondary-color) ;
+            
+          }
+
+
+          .left-side{
+            margin-left: 100px;
+            line-height: 25px;
+            width: 650px;
+            height: 100vh;
+            margin-top: 30px;
+
+          }
+          /* .first-form{
+            border: none;
+          } */
+
+          .right-side{
+            margin-top: 30px;
+            /* margin-left: 200px; */
+            width: 650px;
+            height: 100vh;
+            background-size: cover;
+
+          }
+          /* styling for image */
+          .right-side img{
+            margin-top: 30px;
+            width: 100%;
+            height: 500px;
+            background-size: cover;
+          }
+          .form{
+            width: 500px;
+            height: 400px;
+            border-radius: 8px;
+            border: none;
+
+            margin-top: 25px;
+            background-color: white;
+          }
+          .containe{
+            /* background-color: lightpink; */
+            display: flex;
+            background-color:var(--primary-color);
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+          }
+
+          .form .input-field{
+            width: 490px;
+            height: 50px;
+            border-radius: 10px;
+            margin: 8px 5px;
+
+            
+          }
+          /* .column-spacing{
+            margin: 0px 2px;
+          } */
+
+
+          /* /media query */
+          /* Add this media query at the end of your CSS */
+          @media only screen and (max-width: 992px) {
+            body {
+              font-size: 14px; /* Adjust font size for smaller screens */
+            }
+
+            .container-fluid {
+              padding: 0 15px; /* Add padding to container for smaller screens */
+            }
+
+            .left-side {
+              margin-left: 0; /* Remove left margin for smaller screens */
+              width: 100%; /* Full width for smaller screens */
+            }
+
+            .right-side {
+              margin-top: 30px;
+              width: 100%; /* Full width for smaller screens */
+            }
+
+            .right-side img {
+              width: 100%; /* Make image fill the container for smaller screens */
+              height: auto; /* Maintain aspect ratio */
+            }
+
+            .form {
+              width: 100%; /* Full width for smaller screens */
+              height: auto; /* Auto height */
+            }
+
+            .form .input-field {
+              width: 100%; /* Full width for input fields */
+            }
+
+            .container {
+              padding: 0 15px; /* Add padding to container for smaller screens */
+            }
+          }
+
+
+          .grid-item {
+            border: 1px solid var(--primary-color);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            /* margin-bottom: 20px; */
+            /* margin-left:   10px; */
+            margin: 10px 10px;
+            
+          }
+          .property-section{
+            
+            padding-top: 50px;
+            list-style: 1.5rem;
+          }
+
+          .property-section h1{
+            
+            /* display:inline-block; */
+            display: flex;
+            justify-content: space-between;
+            
+          }
+
+          .property-section .explore{
+            color: var(--primary-color);
+          }
+
+          #maticon{
+            background-color: var(--primary-color);
+          }
+
+          .list-item{
+            display: flex;
+            justify-content: space-between;
+            list-style-type: none; 
+            padding: 0;
+          }
+          .list-item li{
+            display: inline;
+            
+          }
+          .list-item li a{
+            text-decoration: none;
+            color: var(--secondary-color);
+            opacity: 0.5;
+
+          }
+          #maticon i{
+            /* height: 30px;
+            width: 30px; */
+            font-size: 20px;
+            margin-top: 25px;
+
+          }
+          .card{
+            height: 400px;
+          }
+          .card-img-top img{
+            height: 50%;
+            object-fit: cover;
+            
+          }
+
+          .card-2{
+            height: 200px;
+            perspective: 1000px;
+            position: relative;
+          }
+          .card-2 img{
+            height: 100%;
+            object-fit: cover;
+            transform-style: preserve-3d;
+            transition: transform 0.5s;
+          }
+
+          .card-2 img:hover{
+            transform: rotateY(10deg) rotateX(10deg) scale(1.1);
+          }
+
+          /* css for the hover effects */
+
+          .hover-effect :hover{
+            transform: translateY(-3px);
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+          }
+
+          /* .property-section .explore :hover{
+            font-weight: 600;
+          } */
+          .list-item :hover{
+            opacity: 1;
+            /* color: black; */
+            cursor: pointer;
+          }
+
+
+          .image-best{
+            
+            height: 400px;
+            width: 50%;
+            margin-top: 50px;
+
+          }
+          .image-best img{
+            margin-left: 10px;
+            height: 100%;
+            object-fit: cover;
+          }
+          .image-best img{
+            border-radius: 8px;
+            box-shadow:-20px 20px 0px rgb(252 101 10);
+            
+          }
+          .image-best ul{
+            padding-left: 0px;
+          }
+          .image-best ul li i{
+            margin-right: 20px;
+          }
+          .image-best ul li{
+            list-style-type: none;
+            
+          }
+          /* css for image slider */
+          .carousel-inner {
+            padding: 1em;
+          }
+          .card {
+            margin: 0 0.5em;
+            box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+            border: none;
+          }
+          .carousel-control-prev,
+          .carousel-control-next {
+            background-color: var(--primary-color);
+            width: 6vh;
+            height: 6vh;
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+          @media (min-width: 768px) {
+            .carousel-item {
+              margin-right: 0;
+              flex: 0 0 33.333333%;
+              display: block;
+            }
+            .carousel-inner {
+              display: flex;
+            }
+          }
+          .card .img-wrapper {
+              max-width: 100%;
+              height: 13em;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+          }
+          .card img {
+              max-height: 100%;
+          }
+          @media (max-width: 767px) {
+            .card .img-wrapper {
+              height: 17em;
+            }
+          }
+
+
+
+.swiper-container h1 {
+  margin: 0;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
+  color: #26384E;
+  transform: translateY(20px);
+  transition: all 0.4s ease;
+  transition-delay: 0.2s;
+  overflow: hidden;
+  max-width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+@media screen and (max-width: 520px) {
+  h1 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.swiper-container p {
+  font-size: 16px;
+  line-height: 24px;
+  color: #889DB8;
+  transform: translateY(20px);
+  transition: all 0.4s ease;
+  transition-delay: 0.3s;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media screen and (max-width: 520px) {
+ .swiper-container p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+.swiper-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+  position: relative;
+}
+
+.swiper-container {
+  background: linear-gradient(270deg, #f7f9ff 0%, #f2f6ff 100%);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  width: 100%;
+  position: relative;
+  max-width: 420px;
+  height: 100%;
+  max-height: 420px;
+  border-radius: 10px;
+  /* margin-top: 20px; */
+  margin-left: 10px;
+  
+}
+
+.slider-image-wrapper {
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider-item {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  opacity: 0;
+  background: linear-gradient(270deg, #f7f9ff 0%, #f2f6ff 100%);
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+.slider-item-content {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: 0.4s;
+}
+.slider-item-content > * {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.swiper-slide-active .slider-item-content > * {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.slider-image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: 0.2s;
+}
+
+.swiper-pagination {
+  position: absolute;
+  left: 50%;
+  bottom: 8px;
+  transform: translatex(-50%);
+  z-index: 1;
+  width: auto !important;
+}
+
+.swiper-pagination-bullet {
+  border-radius: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  line-height: 30px;
+  font-size: 12px;
+  opacity: 1;
+  background: rgba(255, 185, 0, 0.3);
+  display: inline-block;
+  margin-right: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.swiper-pagination-bullet-active {
+  background: #FFB200;
+  width: 20px;
+  border-radius: 10px;
+}
+
+.slider-buttons {
+  position: absolute;
+  display: flex;
+  top: 100%;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 8px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  background-color: #FFB200;
+  border: 2px solid var(--secondary-color);
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  color: var(--secondary-color);
+  position: relative;
+  margin-left: 2px;
+
+}
+.swiper-button-next:before,
+.swiper-button-prev:before {
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  height: 1px;
+  width: 0;
+  left: 0;
+  bottom: -1px;
+  transition: 0.2s;
+}
+.swiper-button-next:hover:before,
+.swiper-button-prev:hover:before {
+  width: 100%;
+}
+
+.socials {
+  position: fixed;
+  top: 12px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+}
+.socials .social-link {
+  display: inline-block;
+  margin-left: 8px;
+  color: #fff;
+}
+
+@media screen and (max-width: 520px) {
+  .swiper-button-next:hover:before,
+.swiper-button-prev:hover:before {
+    display: none;
+  }
+}
+
+/* Footer-section */
+#footer {
+  height: 20px;
+  background: var(--secondary-color);
+  color: white;
+
+}
+
+/* /media query */
+/* Add this media query at the end of your CSS */
+@media only screen and (max-width: 992px) {
+  body {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+
+  .container-fluid {
+    padding: 0 15px; /* Add padding to container for smaller screens */
+  }
+
+  .left-side {
+    margin-left: 0; /* Remove left margin for smaller screens */
+    width: 100%; /* Full width for smaller screens */
+  }
+
+  .right-side {
+    margin-top: 30px;
+    width: 100%; /* Full width for smaller screens */
+  }
+
+  .right-side img {
+    width: 100%; /* Make image fill the container for smaller screens */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .form {
+    width: 100%; /* Full width for smaller screens */
+    height: auto; /* Auto height */
+  }
+
+  .form .input-field {
+    width: 100%; /* Full width for input fields */
+  }
+
+  .container {
+    padding: 0 15px; /* Add padding to container for smaller screens */
+  }
+}
+        </style>
+        <script src="./javascript/index.js"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg nav-bar">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <i class="fa-solid fa-house fa-2x nav-item mx-3">
+                        <span style="color: #fe8d4b; font-size: 30px;" class="nav-item mx-2">
+                            <sup>Relasto</sup>
+                        </span>
+                    </i>
+                </a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active mx-3" aria-current="page" href="/index.html">Home</a>
+                        </li>
+                        <li class="nav-item mx-3">
+                            <a class="nav-link mx-3" href="/Property.html">Property</a>
+                        </li>
+                        <li class="nav-item mx-3">
+                            <a class="nav-link mx-3" href="/contact1.html">Contact Us</a>
+                        </li>
+                        <li class="nav-item mx-3">
+                            <a class="nav-link mx-3" href="/trial.html">About us</a>
+                        </li>
+                    </ul>
+                    
+                    <form class="d-flex">
+                        <input
+                            class="form-control me-2"
+                            type="search"
+                            placeholder="Search"
+                            aria-label="Search"
+                        >
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                        <button class="btn btn-sm btn-outline-secondary bg-dark mx-2 " onclick="" type="button">Login</button>
+                        <img src="https://i.ibb.co/t4CPM8T/moon-jpg.jpg" alt="moon-icon" id="moon">
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <div class="containe">
+            <div class="left-side">
+                <h1>Find a perfect property where you'll love to live</h1>
+                <p>We help businesses customize automate and scale up thier add production and dilevery</p>
+                <div class="form">
+                    <form class="d-flex flex-wrap">
+                        <button class="btn btn-lg btn-outline-secondary bg-grey mx-2 my-2" style="width: 150px;  border-radius: 8px;" type="button">Buy</button>
+                        <button class="btn btn-lg btn-outline-secondary bg-grey mx-2 my-2" style="width: 150px; border-radius: 8px;" type="button">Sell</button>
+                        <button class="btn btn-lg btn-outline-secondary bg-grey mx-2  my-2" style="width: 150px; border-radius: 8px;" type="button">Rent</button>
+                        <br>
+                        <br>
+                        <input type="text" placeholder="City/Street" class="border-light p-3 input-field">
+                        <br>
+                        <input type="text" placeholder="Property type" class="border-light p-3 input-field">
+                        <br>
+                        <input type="text" placeholder="Price Range" class="border-light p-3 input-field">
+                        <button class="btn btn-lg btn-outline-secondary bg-dark mx-2 my-4" style=" width: 490px; border-radius: 8px;" type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+            <div class="right-side">
+                <img src="https://i.ibb.co/1QLnTxH/home.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid"style="background-color: var(--primary-color); border-top: 0.5px solid var(--secondary-color); border-bottom: 0.5px solid var(--secondary-color);" >
+        <div class="row justify-content-center align-items-center ">
+            <div class="col-md-5  grid-item text-center mb-4" style="background-color: #f7e0cb; border-radius: 10px; color: black;">
+                <h1>Simple & easy way to find your dream Appointment</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab rerum ad quibusdam veritatis animi reiciendis enim eligendi non placeat eos expedita</p>
+            </div>
+            <div class="col-md-6 justify-content-center align-items-center ">
+                <div class="row mb-4 hover-effect">
+                    <div class="col-6 col-md-4  grid-item text-center mt-2 mt-md-0" style="background-color: #f7e0cb; border-radius: 10px;">
+                        <a href="Property.html" style="text-decoration: none;  color: black;">
+                            <i class="fa-brands fa-searchengin"></i>
+                            <br>
+                            Search your location
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4  grid-item text-center mt-2 mt-md-0" style="background-color: #f7e0cb; border-radius: 10px;">
+                        <a href="contact1.html" style="text-decoration: none;  color: black;">
+                            <i class="fa-solid fa-eye"></i>
+                            <br>
+                            Visit appointment
+                        </a>
+                    </div>
+                </div>
+                <div class="row hover-effect">
+                    <div class="col-6 col-md-4 grid-item text-center mt-2 mt-md-0" style="background-color: #f7e0cb; border-radius: 10px;">
+                        <a href="Property.html" style="text-decoration: none;  color: black;">
+                            <i class="fa-solid fa-wallet"></i>
+                            <br>
+                            Get your property
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4  grid-item text-center mt-2 mt-md-0" style="background-color: #f7e0cb; border-radius: 10px;">
+                        <a href="contact1.html" style="text-decoration: none; color: black;">
+                            <i class="fa-solid fa-face-smile"></i>
+                            <br>
+                            Enjoy your appointment
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid " id="maticon" style=" border-bottom: 0.5px solid var(--secondary-color);">
+        <div class="row">
+            <div class="col-md-3 text-center">
+                <p>
+                    <i class="fa-solid fa-dollar-sign"></i>
+                </p>
+                <h2>$15.4M</h2>
+                <p>
+                    Owned from
+                    <br>
+                    Properties transactions
+                </p>
+            </div>
+            <div class="col-md-3 text-center">
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                </p>
+                <h2>25K+</h2>
+                <p>Properties for Buy & sell</p>
+            </div>
+            <div class="col-md-3 text-center">
+                <p>
+                    <i class="fa-solid fa-list-check"></i>
+                </p>
+                <h2>500</h2>
+                <p>
+                    Daily completed
+                    <br>
+                    transactions
+                </p>
+            </div>
+            <div class="col-md-3 text-center">
+                <p>
+                    <i class="fa-solid fa-face-smile"></i>
+                </p>
+                <h2>600+</h2>
+                <p>Reagular Clients</p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+<div class="container-fluid" style="background-color: var(--primary-color);">
+    <div class="container pt-3">
+        <h1>Featured Property
+            <button class="btn explore">Explore Now <i class="fa-solid fa-arrow-right"></i></button>
+        </h1>
+        <ul class="list-item pt-3">
+            <li><a class="link1" onclick="hideandShow()">Residential Property</a></li>
+            <li><a class="link2" onclick="hideandShow2()">Commercial Property</a></li>
+            <li><a class="link2" onclick="hideandShow3()">Industrial Property</a></li>
+            <li><a class="link2" onclick="hideandShow4()">Agricultural Property</a></li>
+        </ul>
+    <div class="Residential-property">
+        <div class="row">
+            <!-- Your card elements with col-* classes -->
+            <!-- Example: -->
+            <div class="col-12 col-md-6 col-lg-4 mt-3">
+                <div class="card" style="background-color: #fff7f0; border: 2px solid var(--secondary-color); color: black;">
+                    <!-- Card content -->
+                    <img class="card-img-top" src="https://i.ibb.co/XShPzcD/house-card3.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                </div>
+            </div>
+            <!-- Repeat the above structure for each card -->
+            <div class="col-12 col-md-6 col-lg-4 mt-3">
+                <div class="card" style="background-color: #fff7f0; border: 2px solid var(--secondary-color); color: black;">
+                    <!-- Card content -->
+                    <img class="card-img-top" src="https://i.ibb.co/c29dmbY/house-card2.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 mt-3">
+                <div class="card" style="background-color: #fff7f0; border: 2px solid var(--secondary-color); color: black;">
+                    <!-- Card content -->
+                    <img class="card-img-top" src="https://i.ibb.co/7Rb4T5s/house-card5.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Your card elements with col-* classes -->
+            <!-- Example: -->
+            <div class="col-12 col-md-6 col-lg-4 mt-3">
+                <div class="card" style="background-color: #fff7f0; border: 2px solid var(--secondary-color); color: black;">
+                    <!-- Card content -->
+                    <img class="card-img-top" src="https://i.ibb.co/XShPzcD/house-card3.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                </div>
+            </div>
+            <!-- Repeat the above structure for each card -->
+            <div class="col-12 col-md-6 col-lg-4 mt-3">
+                <div class="card" style="background-color: #fff7f0; border: 2px solid var(--secondary-color); color: black;">
+                    <!-- Card content -->
+                    <img class="card-img-top" src="https://i.ibb.co/c29dmbY/house-card2.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 mt-3">
+                <div class="card" style="background-color: #fff7f0; border: 2px solid var(--secondary-color); color: black;">
+                    <img class="card-img-top" src="https://i.ibb.co/7Rb4T5s/house-card5.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="commericail-section">
+        <div class="row">
+            <!-- Your card elements with col-* classes -->
+            <!-- Example: -->
+            <div class="col-12 col-md-6 col-lg-4 mt-3">
+                <div class="card" style="background-color: #fff7f0; border: 2px solid var(--secondary-color); color: black;">
+                    <!-- Card content -->
+                    <img class="card-img-top" src="https://i.ibb.co/c29dmbY/house-card2.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                </div>
+            </div>
+            <!-- Repeat the above structure for each card -->
+            <div class="col-12 col-md-6 col-lg-4 mt-3">
+                <div class="card" style="background-color: #fff7f0; border: 2px solid var(--secondary-color); color: black;">
+                    <!-- Card content -->
+                    <img class="card-img-top" src="https://i.ibb.co/yNWDq0K/interirour-card.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 mt-3">
+                <div class="card" style="background-color: #fff7f0; border: 2px solid var(--secondary-color); color: black;">
+                    <!-- Card content -->
+                    <img class="card-img-top" src="https://i.ibb.co/7Rb4T5s/house-card5.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Your card elements with col-* classes -->
+            <!-- Example: -->
+            <div class="col-12 col-md-6 col-lg-4 mt-3">
+                <div class="card" style="background-color: #fff7f0; border: 2px solid var(--secondary-color); color: black;">
+                    <!-- Card content -->
+                    <img class="card-img-top" src="https://i.ibb.co/7Rb4T5s/house-card5.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                </div>
+            </div>
+            <!-- Repeat the above structure for each card -->
+            <div class="col-12 col-md-6 col-lg-4 mt-3">
+                <div class="card" style="background-color: #fff7f0; border: 2px solid var(--secondary-color); color: black;">
+                    <!-- Card content -->
+                    <img class="card-img-top" src="https://i.ibb.co/c29dmbY/house-card2.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 mt-3">
+                <div class="card" style="background-color: #fff7f0; border: 2px solid var(--secondary-color); color: black;">
+                    <!-- Card content -->
+                    <img class="card-img-top" src="https://i.ibb.co/XShPzcD/house-card3.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="industrial-section">
+        <div class="row">
+            <!-- Your card elements with col-* classes -->
+            <!-- Example: -->
+            <div class="col-12 col-md-6 col-lg-4 mt-3">
+                <div class="card" style="background-color: #fff7f0; border: 2px solid var(--secondary-color); color: black;">
+                    <!-- Card content -->
+                    <img class="card-img-top" src="https://i.ibb.co/7Rb4T5s/house-card5.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                </div>
+            </div>
+            <!-- Repeat the above structure for each card -->
+            <div class="col-12 col-md-6 col-lg-4 mt-3">
+                <div class="card" style="background-color: #fff7f0; border: 2px solid var(--secondary-color); color: black;">
+                    <!-- Card content -->
+                    <img class="card-img-top" src="https://i.ibb.co/7Rb4T5s/house-card5.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 mt-3">
+                <div class="card" style="background-color: #fff7f0; border: 2px solid var(--secondary-color); color: black;">
+                    <!-- Card content -->
+                    <img class="card-img-top" src="https://i.ibb.co/XShPzcD/house-card3.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Your card elements with col-* classes -->
+            <!-- Example: -->
+            <div class="col-12 col-md-6 col-lg-4 mt-3">
+                <div class="card" style="background-color: #fff7f0; border: 2px solid var(--secondary-color); color: black;">
+                    <!-- Card content -->
+                    <img class="card-img-top" src="https://i.ibb.co/7Rb4T5s/house-card5.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                </div>
+            </div>
+            <!-- Repeat the above structure for each card -->
+            <div class="col-12 col-md-6 col-lg-4 mt-3">
+                <div class="card" style="background-color: #fff7f0; border: 2px solid var(--secondary-color); color: black;">
+                    <!-- Card content -->
+                    <img class="card-img-top" src="https://i.ibb.co/Kqfxvm1/house-card.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 mt-3">
+                <div class="card" style="background-color: #fff7f0; border: 2px solid var(--secondary-color); color: black;">
+                    <!-- Card content -->
+                    <img class="card-img-top" src="https://i.ibb.co/7Rb4T5s/house-card5.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="agricultural-section">
+        <div class="row">
+            <!-- Your card elements with col-* classes -->
+            <!-- Example: -->
+            <div class="col-12 col-md-6 col-lg-4 mt-3">
+                <div class="card" style="background-color: #fff7f0; border: 2px solid var(--secondary-color); color: black;">
+                    <!-- Card content -->
+                    <img class="card-img-top" src="https://i.ibb.co/yNWDq0K/interirour-card.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                </div>
+            </div>
+            <!-- Repeat the above structure for each card -->
+            <div class="col-12 col-md-6 col-lg-4 mt-3">
+                <div class="card" style="background-color: #fff7f0; border: 2px solid var(--secondary-color); color: black;">
+                    <!-- Card content -->
+                    <img class="card-img-top" src="https://i.ibb.co/Kqfxvm1/house-card.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 mt-3">
+                <div class="card" style="background-color: #fff7f0; border: 2px solid var(--secondary-color); color: black;">
+                    <!-- Card content -->
+                    <img class="card-img-top" src="https://i.ibb.co/7Rb4T5s/house-card5.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Your card elements with col-* classes -->
+            <!-- Example: -->
+            <div class="col-12 col-md-6 col-lg-4 mt-3">
+                <div class="card" style="background-color: #fff7f0; border: 2px solid var(--secondary-color); color: black;">
+                    <!-- Card content -->
+                    <img class="card-img-top" src="https://i.ibb.co/Kqfxvm1/house-card.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                </div>
+            </div>
+            <!-- Repeat the above structure for each card -->
+            <div class="col-12 col-md-6 col-lg-4 mt-3">
+                <div class="card" style="background-color: #fff7f0; border: 2px solid var(--secondary-color); color: black;">
+                    <!-- Card content -->
+                    <img class="card-img-top" src="https://i.ibb.co/7Rb4T5s/house-card5.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 mt-3">
+                <div class="card" style="background-color: #fff7f0; border: 2px solid var(--secondary-color); color: black;">
+                    <!-- Card content -->
+                    <img class="card-img-top" src="https://i.ibb.co/Kqfxvm1/house-card.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid d-flex pt-3" style="background-color: var(--primary-color);">
+    <div class="container mt-5">
+        <div class="row mt-5 justify-content-center ">
+            <div class="col-md-10 ">
+                <h1 style="font-size: 25px;">Unlock the door to your dream apartment effortlessly with our streamlined approach to apartment hunting. Say goodbye to endless scrolling and frustrating searches.Our intuitive platform simplifies the process, allowing you to browse through a curated selection of handpicked listings tailored to your preferences.</p>
+                <button type="submit" class="btn mt-4 rounded bg-dark btn-outline-success btn-info">Get Started</button>
+            </div>
+        </div> 
+    </div>
+    <div class="container">
+        <div class="row mt-2 ">
+            <div class="col-md-5">
+                <div class="card card-2">
+                    <img src="https://i.ibb.co/yNWDq0K/interirour-card.jpg" class="card-img-top" alt="Image 1">
+                </div>
+            </div>
+            <div class="col-md-5 ">
+                <div class="card card-2">
+                    <img src="https://i.ibb.co/Hd97sKZ/interiour-card.jpg" class="card-img-top" alt="Image 1">
+                </div>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-md-5 ">
+                <div class="card card-2">
+                    <img src="https://i.ibb.co/CtbrPvJ/house-card.jpg" class="card-img-top" alt="Image 1">
+                </div>
+            </div>
+            <div class="col-md-5 ">
+                <div class="card card-2 ">
+                    <img src="https://i.ibb.co/yNWDq0K/interirour-card.jpg" class="card-img-top" alt="Image 1">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid" style="background-color: var(--primary-color);">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 image-best">
+                <img src="https://i.ibb.co/hgwDZsS/house-card6.jpg" alt="" class="img-fluid">
+            </div>
+            <div class="col-md-5 image-best">
+                <h1>Best rated host on popular sites</h1>
+                <p>Discover the pinnacle of hosting excellence with our top-rated services, consistently hailed as the best by discerning users across popular review platforms. From unparalleled reliability to lightning-fast speeds, our hosting solutions redefine industry standards. Join countless satisfied customers who trust us to deliver unmatched performance, impeccable customer support, and unbeatable value</p>
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Find excellent deals
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Friendly host & fast support
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Secure payment system
+                    </li>
+                </ul>
+                <button class="btn mt-4 rounded bg-dark btn-outline-success btn-info">Learn more</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid pb-3 pt-4" style="background-color: var(--primary-color);">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="slider-item swiper-slide">
+                        <div class="slider-image-wrapper">
+                            <img class="slider-image img-fluid" src="https://i.ibb.co/Hd97sKZ/interiour-card.jpg" alt="SliderImg">
+                        </div>
+                        <div class="slider-item-content">
+                            <h1>Exploring House's Beauty</h1>
+                            <p>Discover the breathtaking landscapes, rich history, and delectable cuisine of Italy in this mesmerizing journey.</p>
+                        </div>
+                    </div>
+                    <div class="slider-item swiper-slide">
+                        <div class="slider-image-wrapper">
+                            <img class="slider-image img-fluid" src="https://i.ibb.co/yNWDq0K/interirour-card.jpg" alt="SliderImg">
+                        </div>
+                        <div class="slider-item-content">
+                            <h1>Exploring Hidden Bunkers</h1>
+                            <p>Uncover the secrets of underground bunkers and their historical significance in this thrilling adventure.</p>
+                        </div>
+                    </div>
+                    <div class="slider-item swiper-slide">
+                        <div class="slider-image-wrapper">
+                            <img class="slider-image img-fluid" src="https://i.ibb.co/XShPzcD/house-card3.jpg" alt="SliderImg">
+                        </div>
+                        <div class="slider-item-content">
+                            <h1>Exploring Hidden Bunkers</h1>
+                            <p>Uncover the secrets of underground bunkers and their historical significance in this thrilling adventure.</p>
+                        </div>
+                    </div>
+                    <div class="slider-item swiper-slide">
+                        <div class="slider-image-wrapper">
+                            <img class="slider-image img-fluid" src="https://i.ibb.co/7Rb4T5s/house-card5.jpg" alt="SliderImg">
+                        </div>
+                        <div class="slider-item-content">
+                            <h1>Exploring Hidden Bunkers</h1>
+                            <p>Uncover the secrets of underground bunkers and their historical significance in this thrilling adventure.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5 image-best">
+            <h1>Best interiour design</h1>
+            <p>With meticulous attention to detail and a keen eye for aesthetics, we curate harmonious environments that inspire and delight. Discover the perfect blend of form and function with our tailored design solutions, elevating your living spaces to unparalleled levels of beauty and functionality. Experience the magic of exceptional interior design and unlock the true potential of your home with us</p>
+            <ul>
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Find excellent deals
+                </li>
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Friendly host & fast support
+                </li>
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Secure payment system
+                </li>
+            </ul>
+            <button class="btn mt-4 rounded bg-dark btn-outline-success btn-info">Learn more</button>
+        </div>
+    </div>
+    <div class="row"></div>
+</div>
+
+<div id="footer" >
+    <footer class="row row-cols-5 py-5   bg-dark text-center text-white">
+        <!-- <div class="col"> -->
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <i class="fa-solid fa-house fa-2x nav-item mx-3">
+                    <span style="color: #fe8d4b; font-size: 30px;" class="nav-item mx-2">
+                        <sup>Relasto</sup>
+                    </span>
+                </i>
+            </a>
+            <br>
+            <br>
+            <p>
+                <span>144411, Law gate,</span>
+                <span>Punjab (India)</span>
+            </p>
+            <p class="text-muted">
+                <h4>© 2024</h4>
+            </p>
+        </div>
+        <div class="col hovers">
+            <span>
+                <h5>Social</h5>
+            </span>
+            <section class="mb-4">
+                <!-- Facebook -->
+                <a class="btn btn-outline-light btn-floating m-1" href="www.facebook.com" role="button">
+                    <i class="fab fa-facebook-f">
+                    </i
+              >
+                </a>
+                <!-- Twitter -->
+                <a class="btn btn-outline-light btn-floating m-1" href="www.twitter.com" role="button">
+                    <i class="fab fa-twitter">
+                    </i
+              >
+                </a>
+                <!-- Instagram -->
+                <a class="btn btn-outline-light btn-floating m-1" href="www.instagram.com" role="button">
+                    <i class="fab fa-instagram">
+                    </i
+              >
+                </a>
+                <!-- Linkedin -->
+                <a class="btn btn-outline-light btn-floating m-1" href="www.linkedin.com " role="button">
+                    <i class="fab fa-linkedin-in">
+                    </i
+              >
+                </a>
+            </section>
+        </div>
+        <div class="col hovers">
+            <h5>Section</h5>
+            <ul class="nav flex-column">
+                <li class="nav-item mb-2 ">
+                    <a href="#" class="nav-link p-0 hovering">Home</a>
+                </li>
+                <li class="nav-item mb-2 ">
+                    <a href="#" class="nav-link p-0 hovering">Features</a>
+                </li>
+                <li class="nav-item mb-2 ">
+                    <a href="#" class="nav-link p-0 hovering">Pricing</a>
+                </li>
+                <li class="nav-item mb-2 ">
+                    <a href="#" class="nav-link p-0 hovering">FAQs</a>
+                </li>
+                <li class="nav-item mb-2 ">
+                    <a href="#" class="nav-link p-0 hovering">About</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col hovers">
+            <h5>Section</h5>
+            <ul class="nav flex-column">
+                <li class="nav-item mb-2 ">
+                    <a href="#" class="nav-link p-0 hovering">Home</a>
+                </li>
+                <li class="nav-item mb-2 ">
+                    <a href="#" class="nav-link p-0 hovering">Features</a>
+                </li>
+                <li class="nav-item mb-2 ">
+                    <a href="#" class="nav-link p-0 hovering">Pricing</a>
+                </li>
+                <li class="nav-item mb-2 ">
+                    <a href="#" class="nav-link p-0 hovering">FAQs</a>
+                </li>
+                <li class="nav-item mb-2 ">
+                    <a href="#" class="nav-link p-0 hovering">About</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col hovers">
+            <h5>Section</h5>
+            <ul class="nav flex-column">
+                <li class="nav-item mb-2 ">
+                    <a href="#" class="nav-link p-0 hovering">Home</a>
+                </li>
+                <li class="nav-item mb-2 ">
+                    <a href="#" class="nav-link p-0 hovering">Features</a>
+                </li>
+                <li class="nav-item mb-2 ">
+                    <a href="#" class="nav-link p-0 hovering">Pricing</a>
+                </li>
+                <li class="nav-item mb-2 ">
+                    <a href="#" class="nav-link p-0 hovering">FAQs</a>
+                </li>
+                <li class="nav-item mb-2 ">
+                    <a href="#" class="nav-link p-0 hovering">About</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</div>
+<!-- partial -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.5/swiper-bundle.min.js"></script>
+<script src="./javascript/script.js"></script>
+<script>
+
+    var icon=document.getElementById("moon");
+    icon.onclick=function(){
+        document.body.classList.toggle("dark-theme");
+        if(document.body.classList.contains("dark-theme")){
+            icon.src="https://i.ibb.co/gF0v2PC/sun-jpg.jpg";
+        }
+        else{
+            icon.src="https://i.ibb.co/t4CPM8T/moon-jpg.jpg";
+        }
+    }
+    var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    effect: 'fade',
+    loop: true,
+    speed: 300,
+    mousewheel: {
+      invert: false,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      dynamicBullets: true
+    },
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    }
+  });
+
+  var div=document.querySelector(".Residential-property");
+  var display=1;
+  function hideandShow(){
+    if(display==1){
+      div.style.display='block';
+      display=0;
+    }
+    else{
+      div.style.display='none';
+      display=0;
+    }
+  }
+  var div2=document.querySelector(".commericail-section");
+  var display=1;
+  function hideandShow2(){
+    if(display==1){
+      div2.style.display='block';
+      display=0;
+    }
+    else{
+      div2.style.display='none';
+      display=1;
+    }
+  }
+
+  var div3=document.querySelector(".industrial-section");
+  var display=1;
+  function hideandShow3(){
+    if(display==1){
+      div3.style.display='block';
+      display=0;
+    }
+    else{
+      div3.style.display='none';
+      display=1;
+    }
+  }
+
+  var div4=document.querySelector(".agricultural-section");
+  var display=1;
+  function hideandShow4(){
+    if(display==1){
+      div4.style.display='block';
+      display=0;
+    }
+    else{
+      div4.style.display='none';
+      display=1;
+    }
+  }
+</script>
+</body>
+</html>
