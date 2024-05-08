@@ -26,4 +26,8 @@ function onconnected(socket){
         socketconected.delete(socket.id)
         io.emit('clients-total',socketconected.size)
     })
+    socket.on('message',(data)=>{
+        console.log(data);
+        socket.broadcast.emit('chatmessage',data);
+    })
 }
