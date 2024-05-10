@@ -1,7 +1,7 @@
 const express=require("express");
 const app=express();
 const path=require('path');
-const { Socket } = require("socket.io");
+const { socket } = require("socket.io");
 const port=process.env.PORT || 4000
 const server=app.listen(port,()=>{
     console.log("App listing at port",port);
@@ -16,7 +16,7 @@ io.on('connection',onconnected)
 
 let socketconected=new Set()
 function onconnected(socket){
-    console.log(Socket.id)
+    console.log(socket.id)
     socketconected.add(socket.id);
 
     io.emit('clients-total',socketconected.size);
