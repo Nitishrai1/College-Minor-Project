@@ -1,5 +1,7 @@
 const mongoose=require("mongoose");
-mongoose.connect("mongodb://localhost:27017/Login-Form-Details")
+const murl = process.env.MONGO_URL;
+console.log(murl);
+mongoose.connect(murl)
 .then(()=>{
     console.log("Mongo connected");
 })

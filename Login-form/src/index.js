@@ -1,7 +1,9 @@
 const express=require("express");
 const app=express();
 const path=require("path");
-
+const PORT=process.env.PORT||5000;
+console.log(PORT);
+require("dotenv").config();
 const collection=require("./mongodb");
 
 app.use(express.static("public"));
@@ -73,7 +75,7 @@ app.get("/index.html", (req, res) => {
 
 
 
-app.listen(3000,()=>{
+app.listen(PORT,()=>{
     console.log("Port connected");
 })
 
