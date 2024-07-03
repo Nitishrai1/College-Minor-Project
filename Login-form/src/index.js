@@ -2,7 +2,7 @@ const express=require("express");
 const app=express();
 const path=require("path");
 const PORT=process.env.PORT||5000;
-console.log(PORT);
+// console.log(PORT);
 require("dotenv").config();
 const collection=require("./mongodb");
 

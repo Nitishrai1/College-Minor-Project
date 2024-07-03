@@ -1,6 +1,6 @@
 const mongoose=require("mongoose");
 const murl = process.env.MONGO_URL;
-console.log(murl);
+// console.log(murl);
 mongoose.connect(murl)
 .then(()=>{
     console.log("Mongo connected");
